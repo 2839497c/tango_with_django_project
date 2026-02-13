@@ -1,0 +1,14 @@
+{% block title_block %}
+	Restricted Page
+{% endblock %}
+
+{% block body_block %}
+
+{% if user.is_authenticated %}
+<p> Since you are signed in, you can see this text! </p>
+{% else %}
+<p> Access denied </p>
+
+{% endif %}
+
+{% endblock %}
